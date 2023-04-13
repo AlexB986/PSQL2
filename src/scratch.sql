@@ -24,12 +24,11 @@ SELECT * FROM scypro WHERE age BETWEEN 30 AND 50;
 
 
 SELECT last_name AS Фамилия FROM scypro ORDER BY last_name DESC;
-SELECT * FROM scypro WHERE first_name LIKE '_ _ _ _ _';
+SELECT * FROM scypro WHERE LENGHT(first_name) >4;
 
 UPDATE scypro SET first_name = 'Alex' WHERE id = 3;
 UPDATE scypro SET first_name = 'Alex' WHERE id = 4;
 
 SELECT first_name AS имя ,SUM(age) AS суммарный_возраст  FROM scypro GROUP BY имя;
 --
-SELECT last_name age FROM scypro WHERE age = (SELECT MIN(age) FROM scypro);
 SELECT first_name AS  имя, MAX(age) AS max  FROM scypro GROUP BY first_name HAVING COUNT(first_name)>2;
