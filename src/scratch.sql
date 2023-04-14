@@ -8,6 +8,8 @@ create TABLE scypro
 
 );
 
+
+
 INSERT INTO scypro(first_name, last_name, gender, age) VALUES('Alex','Morph','m',30);
 INSERT INTO scypro(first_name,last_name,gender,age) VALUES ('Lisa','Simpson','w',29);
 INSERT INTO scypro(first_name,last_name,gender,age) VALUES ('Eric','Cartman','m',11);
