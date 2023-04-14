@@ -32,5 +32,14 @@ UPDATE scypro SET first_name = 'Alex' WHERE id = 3;
 UPDATE scypro SET first_name = 'Alex' WHERE id = 4;
 
 SELECT first_name AS имя ,SUM(age) AS суммарный_возраст  FROM scypro GROUP BY имя;
+
+SELECT first_name AS имя,MIN(age) AS min_возраст FROM scypro GROUP BY first_name ,age LIMIT 1;
+
+SELECT * FROM scypro ORDER BY age LIMIT 1;
+
+SELECT first_name, age FROM scypro ORDER BY age LIMIT 1;
+
+SELECT first_name,age FROM scypro WHERE age = (SELECT MIN(age) FROM scypro) GROUP BY age, first_name ;
+
 --
 SELECT first_name AS  имя, MAX(age) AS max  FROM scypro GROUP BY first_name HAVING COUNT(first_name)>2;
